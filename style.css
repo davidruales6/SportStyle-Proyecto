@@ -1,0 +1,95 @@
+:root {
+    --primary-color: #ffc107; /* Amarillo Warning */
+    --dark-bg: #111111;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+h1, h2, .navbar-brand {
+    font-family: 'Oswald', sans-serif;
+}
+
+.bg-black { background-color: var(--dark-bg) !important; }
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop') no-repeat center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* Estilo de botones */
+.btn-main {
+    background-color: var(--primary-color);
+    color: black;
+    font-weight: bold;
+    border-radius: 0;
+    padding: 12px 35px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    background-color: #e5ac00;
+    transform: scale(1.05);
+}
+
+/* Tarjetas de Producto */
+.product-card {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* --- NUEVOS ESTILOS PARA COMENTARIOS (ESTILO DAVID RUALES SPORT) --- */
+
+.comment-card {
+    border: 2px solid var(--primary-color) !important;
+    border-radius: 0;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.comment-card:hover {
+    background-color: #fffdf5;
+}
+
+/* Ajuste del Modal para que coincida con la marca */
+.modal-content {
+    border-radius: 0;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 3px solid var(--primary-color);
+}
+
+/* Estilo de los inputs dentro del modal */
+.modal-body .form-control {
+    border-radius: 0;
+    border: 1px solid #ced4da;
+}
+
+.modal-body .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+
+/* Botón de cerrar del modal en blanco */
+.btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
