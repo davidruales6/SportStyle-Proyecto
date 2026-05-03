@@ -11,29 +11,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar Estilo Marathon -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#" onclick="loadPage('inicio')">SPORT<span class="text-warning">STYLE</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto text-uppercase fw-bold">
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('inicio')">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('productos')">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('nosotros')">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('contacto')">Contacto</a></li>
-                </ul>
+    <!-- ENVOLVEMOS EL CONTENIDO PARA EMPUJAR EL FOOTER -->
+    <main class="content-wrapper">
+        <!-- Navbar Estilo Marathon -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#" onclick="loadPage('inicio')">SPORT<span class="text-warning">STYLE</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto text-uppercase fw-bold">
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('inicio')">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('productos')">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('nosotros')">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('contacto')">Contacto</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Contenedor Dinámico -->
-    <div id="content"></div>
+        <!-- Contenedor Dinámico -->
+        <div id="content"></div>
+    </main>
 
     <!-- Footer con firma de David Ruales Sport y Contacto -->
-    <footer class="bg-black text-white py-4 mt-5">
+    <footer class="bg-black text-white py-4 mt-auto">
         <div class="container text-center">
             <p class="mb-2 opacity-75" style="font-size: 0.85rem;">
                 &copy; 2026 SportStyle Ecuador - Innovación Deportiva de <strong>David Ruales Sport</strong>
@@ -62,22 +65,15 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body p-4">
-                    <!-- Campo de Nombre -->
                     <div class="mb-3">
                         <label class="small text-uppercase opacity-75">Tu Nombre</label>
                         <input type="text" id="modal-name" class="form-control bg-transparent text-white border-secondary" placeholder="Ej: David Ruales">
                     </div>
-                    
-                    <!-- Campo de Comentario -->
                     <div class="mb-3">
                         <label class="small text-uppercase opacity-75">Tu Opinión</label>
                         <textarea id="modal-text" class="form-control bg-transparent text-white border-secondary" rows="3" placeholder="Escribe aquí..."></textarea>
                     </div>
-
-                    <!-- Botón de Acción -->
                     <button class="btn btn-main w-100 fw-bold" onclick="saveComment()">PUBLICAR COMENTARIO</button>
-                    
-                    <!-- Campo oculto para manejar el índice de edición -->
                     <input type="hidden" id="editIndex" value="-1">
                 </div>
             </div>

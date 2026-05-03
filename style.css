@@ -1,3 +1,23 @@
+/* --- CONFIGURACIÓN PARA EL STICKY FOOTER --- */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    flex: 1 0 auto; /* Esto empuja el footer hacia abajo */
+}
+
+footer {
+    flex-shrink: 0; /* Evita que el footer se encoja */
+}
+
+/* --- TUS ESTILOS ORIGINALES --- */
 :root {
     --primary-color: #ffc107; /* Amarillo Warning */
     --dark-bg: #111111;
@@ -55,8 +75,7 @@ h1, h2, .navbar-brand {
     object-fit: cover;
 }
 
-/* --- NUEVOS ESTILOS PARA COMENTARIOS (ESTILO DAVID RUALES SPORT) --- */
-
+/* --- ESTILOS PARA COMENTARIOS (ESTILO DAVID RUALES SPORT) --- */
 .comment-card {
     border: 2px solid var(--primary-color) !important;
     border-radius: 0;
